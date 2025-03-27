@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform - Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            color: white;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: black;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: gold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.1em;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links .active {
+            color: gold;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 150px 20px;
+            background: url("bg.png") no-repeat center center/cover;
+        }
+
+        .hero h2 {
+            color: gold;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: gold;
+            color: black;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .info-section {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 50px 0;
+        }
+
+        .info-card {
+            width: 30%;
+            text-align: center;
+        }
+
+        .info-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .logo-circle {
+            background: gold;
+            color: black;
+            padding: 50px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">Platform</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>WELCOME TO PLATFORM</h2>
+        <h1>WE ARE PROFESSIONAL CARE <br> FOR YOUR HAIR</h1>
+        <a href="contact.html" class="btn">Book now</a>
+    </section>
+
+    <section class="info-section">
+        <div class="info-card">
+            <img src="barber.jpg" alt="Barber">
+        </div>
+
+        <div class="info-card center">
+            <div class="logo-circle">
+                <h3>Platform</h3>
+                <p>WELCOME TO OUR SALON</p>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <img src="hc.jpg" alt="Haircut">
+        </div>
+    </section>
+</body>
+
+</html>

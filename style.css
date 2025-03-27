@@ -1,0 +1,191 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    background: #121212;
+    color: white;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: black;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    color: #D4AF37; /* Gold color for active links */
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: url('https://source.unsplash.com/1600x900/?barbershop') no-repeat center/cover;
+}
+
+.hero h2 {
+    font-size: 20px;
+    letter-spacing: 3px;
+    color: #D4AF37;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin: 20px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    margin-top: 20px;
+    color: white;
+    text-decoration: none;
+    border: 2px solid #D4AF37;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #D4AF37;
+}
+
+/* Info Section */
+.info-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    background: #1A1A1A;
+}
+
+.info-card {
+    flex: 1;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.info-card img {
+    max-width: 100%;
+    border: 1px solid #D4AF37;
+}
+
+.info-card.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-circle {
+    padding: 50px;
+    border: 2px solid #D4AF37;
+    border-radius: 50%;
+}
+
+.logo-circle h3 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.logo-circle p {
+    margin: 10px 0 0;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .info-section {
+        flex-direction: column;
+        gap: 30px;
+    }
+/* Circle Container */
+.circle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 300px; /* Adjust the size */
+    height: 300px; /* Adjust the size */
+    border: 2px solid gold; /* Circle border */
+    border-radius: 50%; /* Makes it a circle */
+    overflow: hidden; /* Ensures the image stays inside */
+    text-align: center;
+}
+
+/* Circle Image */
+.circle-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fits well */
+    position: absolute;
+    z-index: -1; /* Sends image to the background */
+}
+
+/* Circle Text */
+.circle-text {
+    position: relative;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.circle-text h2 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.circle-text p {
+    font-size: 0.9rem;
+    margin: 5px 0 0;
+}
+
+}

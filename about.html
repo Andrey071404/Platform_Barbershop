@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: url("back.jpeg") no-repeat center center/cover;
+            color: white;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: black;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: gold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.1em;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links .active {
+            color: gold;
+        }
+
+        .about-hero {
+            text-align: center;
+            padding: 150px 20px;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .about-hero h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: gold;
+        }
+
+        .about-hero p {
+            font-size: 1.2em;
+            opacity: 0.8;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .contact-info h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: gold;
+        }
+
+        .contact-info p {
+            font-size: 1.2em;
+            margin: 5px 0;
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background: gold;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            font-size: 1.1em;
+            transition: 0.3s;
+        }
+
+        .social-links a.tiktok {
+            background: black;
+        }
+
+        .social-links a:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">Platform</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="about-hero">
+        <h1>About Platform</h1>
+        <p>We are passionate about helping you look your best with expert hair services.</p>
+    </section>
+
+    <section class="contact-info">
+        <h2>Contact Information</h2>
+        <p><strong>📍 Address:</strong> Alabastro Street Poblacion 1, Tiaong, Quezon, Tiaong, Philippines</p>
+        <p><strong>📞 Mobile:</strong> +1 948-349-2512</p>
+
+        <div class="social-links">
+            <a href="https://www.facebook.com/share/19M3oEPVdo/" target="_blank" class="social-btn facebook">🌐 Facebook</a>
+            <a href="https://www.tiktok.com/@platform_barbershop?_t=ZS-8uyreNoZbJy&_r=1" target="_blank" class="social-btn tiktok">🎥 TikTok</a>
+        </div>
+    </section>
+</body>
+
+</html>

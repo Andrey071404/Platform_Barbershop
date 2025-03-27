@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #1e1e1e;
+            color: white;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #1a1a1a;
+            padding: 20px 50px;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.1em;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links .active {
+            color: gold;
+        }
+
+        .menu-toggle {
+            background: gold;
+            color: black;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            display: none;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+            background: url("bg.png") no-repeat center center/cover;
+        }
+
+        .left-image {
+            width: 50%;
+        }
+
+        .left-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .contact-form {
+            width: 50%;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        .contact-form h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .contact-form p {
+            font-size: 1em;
+            margin-bottom: 20px;
+            opacity: 0.7;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .form-group textarea {
+            height: 100px;
+        }
+
+        .submit-btn {
+            background: gold;
+            color: black;
+            padding: 12px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        .submit-btn:hover {
+            background: white;
+        }
+
+        /* Notification */
+        .notification {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: green;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            z-index: 1000;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .contact-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .left-image,
+            .contact-form {
+                width: 100%;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">Platform</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="menu-toggle">☰</button>
+    </header>
+
+    <!-- Notification -->
+    <div id="notification" class="notification">✔ Message sent successfully!</div>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="left-image">
+            <img src="price.jpg" alt="Barber Shop">
+        </div>
+
+        <div class="contact-form">
+            <h2>Get in Touch</h2>
+            <p>Have a question? Need an appointment? Contact us today!</p>
+
+            <form id="contactForm">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        // Notification Script
+        document.getElementById("contactForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent form from refreshing page
+            
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("message").value;
+
+            if (name && email && message) {
+                // Show notification
+                let notification = document.getElementById("notification");
+                notification.style.display = "block";
+
+                // Hide notification after 3 seconds
+                setTimeout(() => {
+                    notification.style.display = "none";
+                }, 3000);
+
+                // Clear form fields
+                document.getElementById("contactForm").reset();
+            }
+        });
+    </script>
+
+</body>
+
+</html>

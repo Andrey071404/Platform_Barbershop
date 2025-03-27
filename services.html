@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: url("back.jpeg") no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: black;
+            padding: 20px 50px;
+        }
+
+        .logo {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: gold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover, .nav-links .active {
+            color: gold;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 2em;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .services-list {
+            padding: 60px 20px;
+        }
+
+        .services-list h1 {
+            font-size: 4em;
+            margin-bottom: 40px;
+            font-weight: bold;
+            color: gold;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .service-card {
+            background: white;
+            color: black;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            font-weight: bold;
+            color: #222;
+        }
+
+        .service-card img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+        }
+
+        .service-card p {
+            font-size: 1.3em;
+            opacity: 0.9;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .services {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .services {
+                grid-template-columns: 1fr;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: black;
+                position: absolute;
+                top: 80px;
+                right: 0;
+                width: 100%;
+                text-align: center;
+                padding: 30px 0;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">Platform</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="menu-toggle">☰</button>
+    </header>
+
+    <section class="services-list">
+        <h1>Our Premium Services</h1>
+
+        <div class="services">
+            <div class="service-card">
+                <h2>Hair Cut - ₱120</h2>
+                <img src="haircuticon.jpg" alt="Hair Cut">
+                <p>Custom styles that reflect your unique personality.</p>
+            </div>
+            <div class="service-card">
+                <h2>Shaving-₱50</h2>
+                <img src="shavingicon.jpg" alt="Shaving">
+                <p>Precision shaves for a fresh, clean look.</p>
+            </div>
+            <div class="service-card">
+                <h2>Beard Trim-₱50</h2>
+                <img src="beardicon.jpg" alt="Beard Trim">
+                <p>Expert shaping and grooming for a sharp beard.</p>
+            </div>
+            <div class="service-card">
+                <h2>Kids Haircut-₱120</h2>
+                <img src="kidshaircut.jpg" alt="Kids Haircut">
+                <p>Fun and trendy haircuts for kids of all ages.</p>
+            </div>
+            <div class="service-card">
+                <h2>Signature Shave-₱100</h2>
+                <img src="signature.webp" alt="Signature Shave">
+                <p>Luxurious shave experience with premium products.</p>
+            </div>
+            <div class="service-card">
+                <h2>Face Massage-₱100</h2>
+                <img src="FACE.avif" alt="Face Massage">
+                <p>Relax and refresh with a rejuvenating face massage.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('show');
+        });
+    </script>
+
+</body>
+
+</html>

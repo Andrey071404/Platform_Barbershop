@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: url("bg.png") no-repeat center center/cover;
+            color: white;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: black;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: gold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.1em;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links .active {
+            color: gold;
+        }
+
+        .gallery {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .gallery h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: gold;
+        }
+
+        .gallery p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">Platform</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="gallery">
+        <h1>Gallery</h1>
+        <p>Corner of creativity and skill. Explore our gallery to witness the artistry behind our haircuts.</p>
+        <div class="gallery-grid">
+            <img src="gallery1.jpg" alt="Haircut 1">
+            <img src="gallery2.jpg" alt="Haircut 2">
+            <img src="gallery3.jpg" alt="Haircut 3">
+            <img src="gallery4.jpg" alt="Haircut 4">
+            <img src="gallery5.jpg" alt="Haircut 5">
+            <img src="gallery6.jpg" alt="Haircut 6">
+        </div>
+    </section>
+</body>
+
+</html>
